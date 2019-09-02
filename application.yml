@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+spring:
+  profiles: dev
+  application:
+    nane: microservicecloud-config-zmy-dev
+---
+spring:
+  profiles: test
+  application:
+    nane: microservicecloud-config-zmy-test
