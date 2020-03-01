@@ -1,0 +1,11 @@
+server:
+  port: 9001
+turbine:
+  app-config: SERVER-INSTANCE
+  aggregator:
+    cluster-config: default
+  cluster-name-expression: new String("default")
+eureka:
+  client:
+    service-url:
+      defaultZone: http://registrycenter7001.com:7001/eureka/,http://registrycenter7002.com:7002/eureka/,http://registrycenter7003.com:7003/eureka/

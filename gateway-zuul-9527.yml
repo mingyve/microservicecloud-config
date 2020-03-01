@@ -1,0 +1,22 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://registrycenter7001.com:7001/eureka/,http://registrycenter7002.com:7002/eureka/,http://registrycenter7003.com:7003/eureka/
+  instance:
+    instance-id: gateway-9527.com
+    prefer-ip-address: true
+server:
+  port: 9527
+
+
+zuul:
+  #ignored-services: microservicecloud-dept
+  prefix: /api
+  ignored-services: "*"
+  routes:
+    mydept.serviceId: SERVER-INSTANCE
+    mydept.path: /hello/**
+
+spring:
+  application:
+    name: gateway-zull
