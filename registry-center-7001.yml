@@ -64,5 +64,6 @@ eureka:
     #peer-eureka-nodes-update-interval-ms:
     # Eureka服务器清理无效节点的时间间隔，单位：毫秒，缺省：60000，即60秒
     eviction-interval-timer-in-ms: 60000
+    
 
 
