@@ -1,69 +1,68 @@
 spring:
   application:
-    # Ó¦ÓÃÃû³Æ£¬½«»áÏÔÊ¾ÔÚEureka½çÃæµÄÓ¦ÓÃÃû³ÆÁĞ
+    # åº”ç”¨åç§°ï¼Œå°†ä¼šæ˜¾ç¤ºåœ¨Eurekaç•Œé¢çš„åº”ç”¨åç§°åˆ—
     name: registry-center
 
 server:
-  # Ó¦ÓÃ¶Ë¿Ú£¬Eureka·şÎñ¶ËÄ¬ÈÏÎª£º8761
+  # åº”ç”¨ç«¯å£ï¼ŒEurekaæœåŠ¡ç«¯é»˜è®¤ä¸ºï¼š8761
   port: 7001
 eureka:
   instance:
-    # Ó¦ÓÃÊµÀıÖ÷»úÃû
+    # åº”ç”¨å®ä¾‹ä¸»æœºå
     hostname: registrycenter7001.com
-    # ÊµÀıID
-    instance-id: eureka-client-instance1
-    # ¿Í»§¶ËÔÚ×¢²áÊ±Ê¹ÓÃ×Ô¼ºµÄIP¶ø²»ÊÇÖ÷»úÃû£¬È±Ê¡£ºfalse
+    # å®ä¾‹ID
+    instance-id: eureka-client-instance2
+    # å®¢æˆ·ç«¯åœ¨æ³¨å†Œæ—¶ä½¿ç”¨è‡ªå·±çš„IPè€Œä¸æ˜¯ä¸»æœºåï¼Œç¼ºçœï¼šfalse
     prefer-ip-address: false
-    # Ó¦ÓÃÊµÀıIP
-    ip-address: 127.0.0.1
-    # ·şÎñĞøÔ¼£¨ĞÄÌø£©ÆµÂÊ£¬µ¥Î»£ºÃë£¬È±Ê¡30
+    # åº”ç”¨å®ä¾‹IP
+    #ip-address: 127.0.0.1
+    # æœåŠ¡ç»­çº¦ï¼ˆå¿ƒè·³ï¼‰é¢‘ç‡ï¼Œå•ä½ï¼šç§’ï¼Œç¼ºçœ30
     lease-renewal-interval-in-seconds: 30
-    # ·şÎñÊ§Ğ§Ê±¼ä£¬Ê§Ğ§µÄ·şÎñ½«±»ÌŞ³ı¡£µ¥Î»£ºÃë£¬Ä¬ÈÏ£º90
+    # æœåŠ¡å¤±æ•ˆæ—¶é—´ï¼Œå¤±æ•ˆçš„æœåŠ¡å°†è¢«å‰”é™¤ã€‚å•ä½ï¼šç§’ï¼Œé»˜è®¤ï¼š90
     lease-expiration-duration-in-seconds: 90
-    # ×´Ì¬Ò³ÃæµÄURL£¬Ïà¶ÔÂ·¾¶£¬Ä¬ÈÏÊ¹ÓÃ HTTP ·ÃÎÊ£¬ÈçĞèÊ¹ÓÃ HTTPSÔòÒªÊ¹ÓÃ¾ø¶ÔÂ·¾¶ÅäÖÃ£¬È±Ê¡£º/info
+    # çŠ¶æ€é¡µé¢çš„URLï¼Œç›¸å¯¹è·¯å¾„ï¼Œé»˜è®¤ä½¿ç”¨ HTTP è®¿é—®ï¼Œå¦‚éœ€ä½¿ç”¨ HTTPSåˆ™è¦ä½¿ç”¨ç»å¯¹è·¯å¾„é…ç½®ï¼Œç¼ºçœï¼š/info
     status-page-url: /info
-    # ½¡¿µ¼ì²éÒ³ÃæµÄURL£¬Ïà¶ÔÂ·¾¶£¬Ä¬ÈÏÊ¹ÓÃ HTTP ·ÃÎÊ£¬ÈçĞèÊ¹ÓÃ HTTPSÔòÒªÊ¹ÓÃ¾ø¶ÔÂ·¾¶ÅäÖÃ£¬È±Ê¡£º/health
+    # å¥åº·æ£€æŸ¥é¡µé¢çš„URLï¼Œç›¸å¯¹è·¯å¾„ï¼Œé»˜è®¤ä½¿ç”¨ HTTP è®¿é—®ï¼Œå¦‚éœ€ä½¿ç”¨ HTTPSåˆ™è¦ä½¿ç”¨ç»å¯¹è·¯å¾„é…ç½®ï¼Œç¼ºçœï¼š/health
     health-check-url-path: /health
-    # Èç¹ûÃ»ÓĞÅäÖÃeureka.instance.appname£¬ÔòÊ¹ÓÃspring.application.nameµÄÖµ£¬Èç¹ûÁ¬spring.application.name¶¼Ã»ÓĞÅäÖÃ£¬ÔòÈ¡unknown¡£
-    appname: eureka-client-instance2
+    # å¦‚æœæ²¡æœ‰é…ç½®eureka.instance.appnameï¼Œåˆ™ä½¿ç”¨spring.application.nameçš„å€¼ï¼Œå¦‚æœè¿spring.application.nameéƒ½æ²¡æœ‰é…ç½®ï¼Œåˆ™å–unknownã€‚
+    #appname: eureka-client-instance2
   client:
     service-url:
       defaultZone: http://registrycenter7001.com:7001/eureka/,http://registrycenter7002.com:7002/eureka/,http://registrycenter7003.com:7003/eureka/
-    # ÊÇ·ñÏò×¢²áÖĞĞÄ×¢²á×Ô¼º£¬È±Ê¡£ºtrue
-    # Ò»°ãÇé¿öÏÂ£¬Eureka·şÎñ¶ËÊÇ²»ĞèÒªÔÙ×¢²á×Ô¼ºµÄ
+    # æ˜¯å¦å‘æ³¨å†Œä¸­å¿ƒæ³¨å†Œè‡ªå·±ï¼Œç¼ºçœï¼štrue
+    # ä¸€èˆ¬æƒ…å†µä¸‹ï¼ŒEurekaæœåŠ¡ç«¯æ˜¯ä¸éœ€è¦å†æ³¨å†Œè‡ªå·±çš„
     register-with-eureka: false
-    # ÊÇ·ñ´ÓEureka»ñÈ¡×¢²áĞÅÏ¢£¬È±Ê¡£ºtrue
-    # Ò»°ãÇé¿öÏÂ£¬Eureka·şÎñ¶ËÊÇ²»ĞèÒªµÄ
+    # æ˜¯å¦ä»Eurekaè·å–æ³¨å†Œä¿¡æ¯ï¼Œç¼ºçœï¼štrue
+    # ä¸€èˆ¬æƒ…å†µä¸‹ï¼ŒEurekaæœåŠ¡ç«¯æ˜¯ä¸éœ€è¦çš„
     fetch-registry: false
-    # ¿Í»§¶ËÀ­È¡·şÎñ×¢²áĞÅÏ¢¼ä¸ô£¬µ¥Î»£ºÃë£¬È±Ê¡£º30
+    # å®¢æˆ·ç«¯æ‹‰å–æœåŠ¡æ³¨å†Œä¿¡æ¯é—´éš”ï¼Œå•ä½ï¼šç§’ï¼Œç¼ºçœï¼š30
     registry-fetch-interval-seconds: 30
     healthcheck:
-      # ÊÇ·ñÆôÓÃ¿Í»§¶Ë½¡¿µ¼ì²é
+      # æ˜¯å¦å¯ç”¨å®¢æˆ·ç«¯å¥åº·æ£€æŸ¥
       enabled: false
-    # ³õÊ¼»¯ÊµÀıĞÅÏ¢µ½Eureka·şÎñ¶ËµÄ¼ä¸ôÊ±¼ä£¬µ¥Î»ÎªÃë
+    # åˆå§‹åŒ–å®ä¾‹ä¿¡æ¯åˆ°EurekaæœåŠ¡ç«¯çš„é—´éš”æ—¶é—´ï¼Œå•ä½ä¸ºç§’
     eureka-service-url-poll-interval-seconds: 60
-    # Á¬½ÓEureka·şÎñÆ÷µÄ³¬Ê±Ê±¼ä£¬µ¥Î»£ºÃë£¬È±Ê¡£º5
+    # è¿æ¥EurekaæœåŠ¡å™¨çš„è¶…æ—¶æ—¶é—´ï¼Œå•ä½ï¼šç§’ï¼Œç¼ºçœï¼š5
     eureka-server-connect-timeout-seconds: 5
-    # ´ÓEureka·şÎñÆ÷¶ÁÈ¡ĞÅÏ¢µÄ³¬Ê±Ê±¼ä£¬µ¥Î»£ºÃë£¬È±Ê¡£º8
+    # ä»EurekaæœåŠ¡å™¨è¯»å–ä¿¡æ¯çš„è¶…æ—¶æ—¶é—´ï¼Œå•ä½ï¼šç§’ï¼Œç¼ºçœï¼š8
     eureka-server-read-timeout-seconds: 8
-    # »ñÈ¡ÊµÀıÊ±ÊÇ·ñÖ»±£Áô×´Ì¬Îª UP µÄÊµÀı£¬È±Ê¡£ºtrue
+    # è·å–å®ä¾‹æ—¶æ˜¯å¦åªä¿ç•™çŠ¶æ€ä¸º UP çš„å®ä¾‹ï¼Œç¼ºçœï¼štrue
     filter-only-up-instances: true
-    # Eureka·şÎñ¶ËÁ¬½Ó¿ÕÏĞÊ±µÄ¹Ø±ÕÊ±¼ä£¬µ¥Î»£ºÃë£¬È±Ê¡£º30
+    # EurekaæœåŠ¡ç«¯è¿æ¥ç©ºé—²æ—¶çš„å…³é—­æ—¶é—´ï¼Œå•ä½ï¼šç§’ï¼Œç¼ºçœï¼š30
     eureka-connection-idle-timeout-seconds: 30
-    # ´ÓEureka¿Í»§¶Ëµ½ËùÓĞEureka·şÎñ¶ËµÄÁ¬½Ó×ÜÊı£¬È±Ê¡£º200
+    # ä»Eurekaå®¢æˆ·ç«¯åˆ°æ‰€æœ‰EurekaæœåŠ¡ç«¯çš„è¿æ¥æ€»æ•°ï¼Œç¼ºçœï¼š200
     eureka-server-total-connections: 200
-    # ´ÓEureka¿Í»§¶Ëµ½Ã¿¸öEureka·şÎñÖ÷»úµÄÁ¬½Ó×ÜÊı£¬È±Ê¡£º50
+    # ä»Eurekaå®¢æˆ·ç«¯åˆ°æ¯ä¸ªEurekaæœåŠ¡ä¸»æœºçš„è¿æ¥æ€»æ•°ï¼Œç¼ºçœï¼š50
     eureka-server-total-connections-per-host: 50
-    # ÆôÓÃEureka¿Í»§¶Ë
+    # å¯ç”¨Eurekaå®¢æˆ·ç«¯
     #enabled: true
   server:
-    # ÊÇ·ñÔÊĞí¿ªÆô×ÔÎÒ±£»¤Ä£Ê½£¬È±Ê¡£ºtrue
-    # µ±Eureka·şÎñÆ÷ÔÚ¶ÌÊ±¼äÄÚ¶ªÊ§¹ı¶à¿Í»§¶ËÊ±£¬×ÔÎÒ±£»¤Ä£Ê½¿ÉÊ¹·şÎñ¶Ë²»ÔÙÉ¾³ıÊ§È¥Á¬½ÓµÄ¿Í»§¶Ë
+    # æ˜¯å¦å…è®¸å¼€å¯è‡ªæˆ‘ä¿æŠ¤æ¨¡å¼ï¼Œç¼ºçœï¼štrue
+    # å½“EurekaæœåŠ¡å™¨åœ¨çŸ­æ—¶é—´å†…ä¸¢å¤±è¿‡å¤šå®¢æˆ·ç«¯æ—¶ï¼Œè‡ªæˆ‘ä¿æŠ¤æ¨¡å¼å¯ä½¿æœåŠ¡ç«¯ä¸å†åˆ é™¤å¤±å»è¿æ¥çš„å®¢æˆ·ç«¯
     enable-self-preservation: false
-    #Peer½Úµã¸üĞÂ¼ä¸ô£¬µ¥Î»£ººÁÃë
+    #PeerèŠ‚ç‚¹æ›´æ–°é—´éš”ï¼Œå•ä½ï¼šæ¯«ç§’
     #peer-eureka-nodes-update-interval-ms:
-    # Eureka·şÎñÆ÷ÇåÀíÎŞĞ§½ÚµãµÄÊ±¼ä¼ä¸ô£¬µ¥Î»£ººÁÃë£¬È±Ê¡£º60000£¬¼´60Ãë
+    # EurekaæœåŠ¡å™¨æ¸…ç†æ— æ•ˆèŠ‚ç‚¹çš„æ—¶é—´é—´éš”ï¼Œå•ä½ï¼šæ¯«ç§’ï¼Œç¼ºçœï¼š60000ï¼Œå³60ç§’
     eviction-interval-timer-in-ms: 60000
-    
 
 
